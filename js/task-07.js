@@ -3,5 +3,5 @@ const text = document.querySelector('#text');
 
 fontSizeControl.addEventListener('input', () => {
     const fontSize = fontSizeControl.ariaValueMax;
-    text.style.fontSize = ${fontSize}px;
+    text.style.fontSize = `${fontSize}px`;
 });
