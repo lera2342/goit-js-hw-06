@@ -14,11 +14,12 @@ const ingredients = [
 //   ul.appendChild(liElement);
 // }
 
-let ul = document.querySelector('ul#ingredients');
-
-ingredients.forEach((ingredients) => {
-  const li = document.createElement("li");
-  li.textContent = ingredients;
-  li.classList.add("item");
-  ul.appendChild(li);
+const ul = document.querySelector('#ingredients');
+const array = [];
+ingredients.forEach(ingredient => {
+  const li = document.createElement('li');
+  li.textContent = ingredient;
+  li.classList.add('item');
+  array.push(li);
 })
+ul.append(...array);

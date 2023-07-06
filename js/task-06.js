@@ -1,14 +1,14 @@
-const validationInput = document.querySelector('#validation-input');
-const inputLength = document.querySelector('[data-length="6"]');
-const inputEl = document.querySelector('input');
+const input = document.querySelector('#validation-input');
+const dataLength = input.dataset.length;
 
-validationInput.addEventListener('blur', () => {
-    if (validationInput.ariaValueMax.length === Number(input.length)) {
-        validationInput.classList.remove('invalid');
-        validationInput.classList.add('valid');
-}
-    else {
-        validationInput.classList.remove('valid');
-        validationInput.classList.add('invalid');
-}
+input.addEventListener("blur", () => {
+    const inputValue = input.value;
+
+    if (inputValue.length === Number(dataLength)) {
+        input.classList.add("valid");
+        input.classList.remove("invalid");
+    } else {
+        input.classList.add("invalid");
+        input.classList.remove("valid");
+    }
 });
